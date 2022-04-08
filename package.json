@@ -2,6 +2,7 @@
   "name": "vite-project",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://barrylinx.github.io/vite-react-sweet/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
