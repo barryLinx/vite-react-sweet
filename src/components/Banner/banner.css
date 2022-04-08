@@ -1,0 +1,57 @@
+
+.home {
+  margin-top: 100px;
+  margin-bottom: 200px;
+}
+
+.home .banner {
+  height: 800px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.home .banner .title {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  object-fit: cover;
+}
+
+
+@media screen and (max-width:768px) {
+  .home {
+    margin-top: 70px;
+    margin-bottom: 0;
+    padding: 0 0;
+  }
+  .home .banner {
+    height: auto;
+    min-height: 560px;
+    width: 100%;
+  }
+
+  .home .banner .itemList .item {
+    width: calc(100% / 3);
+  }
+  .home .banner .itemList .item img {
+    width: 100%;
+  }
+}
+
+@media screen and(max-width:425px) {
+  .home {
+    width: 100%;
+  }
+
+  .home .banner {
+    height: auto;
+    min-height: 400px;
+  }
+  .home .banner .title {
+    top: 20%;
+    right: 2%;
+    height: 200px;
+  }
+}

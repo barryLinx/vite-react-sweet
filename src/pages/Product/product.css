@@ -1,0 +1,102 @@
+
+/* product html */
+
+.product .container {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.product .container .card-list {
+  justify-content: flex-end;
+}
+
+.product .container .category {
+  text-align: center;
+  width: 40%;
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-600);
+  position: sticky;
+  top: 600px;
+}
+.product .container .category li {
+  border: 1px solid var(--green-000);
+  border-bottom: none;
+  /* margin: 1rem  0; */
+}
+/*nth-last-child(-n+1) 倒數最後1個*/
+.product .container .category li:nth-last-child(-n + 1) {
+  border-bottom: 1px solid var(--green-000);
+}
+.product .container .category li:nth-child(1) {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 1rem 0rem;
+  border: 1px solid var(--primary);
+}
+.product .container .category li a {
+  color: var(--primary);
+  width: 100%;
+  display: block;
+  padding: 1.2rem 0rem;
+}
+
+.product .container .category li a:hover {
+  background-color: var(--green-000);
+}
+
+.product .container .page-wrap{
+  display: block;
+  width: 100%;
+}
+
+
+.product .container .page-wrap .pagination{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.product .container nav .pagination .page-item{
+  display: inline-block;
+  
+}
+
+.product .container nav .pagination .page-item .page-link{
+  cursor: pointer;
+  color: var(--primary);
+  padding: 1rem 1.5rem;
+  font-size: var(--fs-md);
+  border: 1px solid var(--green-000);
+  border-right:0 ;
+}
+.product .container nav .pagination .page-item .page-link:nth-child(-n+1){
+  border-right: 1px solid var(--green-000);
+}
+
+.product .container nav .pagination .page-item .page-link.active{
+  color: var(--white);
+  background-color: var(--primary);
+}
+
+@media screen and (max-width:768px) {
+  
+  .product .container {
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+  }
+  .product .container .category {
+    width: 100%;
+    margin-bottom: 2rem;
+    position: sticky;
+    top: 0;
+  }
+  .product .container .card-list {
+    justify-content: center;
+  }
+
+  .product .container .page-wrap .pagination{
+    display: flex;
+    justify-content: center;
+  }
+  
+}

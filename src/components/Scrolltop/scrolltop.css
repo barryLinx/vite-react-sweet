@@ -1,0 +1,21 @@
+
+/*  回到最上層 配js */
+#scroll-top {
+  position: fixed;
+  /*top:calc(100% - 12 em) ==  bottom:12rem;*/
+  /* top:-120%; */
+  bottom: -120%;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--secondary);
+  color: var(--primary);
+  font-size: 2rem;
+  border-radius: 1rem;
+  transition: 0.3s linear;
+  z-index: 1000;
+}
+
+#scroll-top.active {
+  /* top:calc(100% - 12rem); */
+  bottom: 2rem;
+}

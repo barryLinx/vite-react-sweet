@@ -1,0 +1,107 @@
+
+.home .banner .itemList {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 80%;
+  width: 100%;
+}
+
+.home .banner .itemList .item {
+  position: relative;
+  writing-mode: vertical-lr; /* 文字長直的*/
+  cursor: pointer;
+  width: 250px; /*itemList width: 100%;  */
+  height: 250px;
+  /* width: auto; */
+}
+
+.home .banner .itemList .item:nth-child(1) {
+  border-right: 2px solid var(--white);
+}
+
+.home .banner .itemList .item:nth-child(2) {
+  border-right: 2px solid var(--white);
+}
+
+.home .banner .itemList .item img {
+  width: 100%;
+  height: 100%;
+  filter: blur(3px);
+  object-fit: cover;
+}
+
+/* hover blur*/
+.home .banner .itemList .item:hover img {
+  filter: blur(0px);
+}
+
+.home .banner .itemList .item::before {
+  position: absolute;
+  content: "";
+  z-index: var(--z-index-shadow);
+  opacity: 0.9;
+  width: 100%;
+  height: 100%;
+}
+
+/* hover */
+.home .banner .itemList .item:hover::before {
+  position: absolute;
+  content: "";
+  z-index: var(--z-index-shadow);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.home .banner .itemList .item_daily {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.home .banner .itemList .item_recommend {
+  color: var(--white);
+}
+
+.home .banner .itemList .item_new {
+  color: var(--white);
+}
+/* 本日精選 */
+.home .banner .itemList .item_daily::before {
+  background-color: var(--secondary);
+}
+/* 人氣推薦 */
+.home .banner .itemList .item_recommend::before {
+  background-color: var(--primary);
+}
+/* 新品上市 */
+.home .banner .itemList .item_new::before {
+  background-color: var(--primary);
+}
+
+.home .banner .itemList .item p {
+  position: absolute;
+  font-size: var(--fs-lg);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: var(--z-index-text);
+}
+/* hover */
+.home .banner .itemList .item:hover p {
+  visibility: hidden;
+}
+
+
+
+@media screen and (max-width:768px) {
+
+  .home .banner .itemList .item {
+    width: calc(100% / 3);
+  }
+  .home .banner .itemList .item img {
+    width: 100%;
+  }
+}

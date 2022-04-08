@@ -1,0 +1,62 @@
+
+/* components */
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.card-list .card .card-header {
+  position: relative;
+}
+
+.card-list .card .card-header::before {
+  content: attr(data-content);
+  /* content: "本日精選"; */
+  writing-mode: vertical-rl;
+  font-size: var(--fs-md);
+  color: var(--white);
+  background-color: var(--primary);
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  padding: 1rem 0.5rem;
+}
+
+.card-list .card .card-header img {
+  width: 316px;
+  height: 360px;
+  object-fit: cover;
+}
+.card-list .card .content {
+  display: flex;
+}
+.card-list .card .content span {
+  color: var(--primary);
+  font-size: var(--fs-md);
+  text-align: center;
+}
+.card-list .card .content span:nth-child(1) {
+  border-right: 1px solid var(--green-000);
+  width: 60%;
+  padding: 1.5rem 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
+.card-list .card .content span:nth-child(2) {
+  padding: 1.5rem 0.5rem;
+  width: 40%;
+  font-weight: var(--fw-600);
+}
+/* components end*/
+
+
+@media screen and (max-width:768px) {
+  .card-list {
+    gap: 8px;
+  }
+}
+

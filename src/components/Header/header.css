@@ -1,0 +1,245 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  /* overflow-x: hidden; */
+  align-items: center;
+  padding: 1rem 6rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: var(--white);
+}
+
+.header .cart-wrap{
+  position: absolute;
+  right: -150%;top: 100%;
+  width: 23rem;
+  height:800px;
+  background-color: var(--green-000);
+  transition:right .3s;
+  overflow:scroll;
+}
+
+.header .cart-wrap h2{
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  color: var(--primary);
+  font-size: var(--fs-xl);
+  /* background-color: var(--secondary); */
+}
+
+.header .cart-wrap .btn-send{
+  margin-bottom: 1rem;
+  /* position:sticky ;
+  top:0; */
+  
+}
+
+.header .cart-wrap.active{
+  right: 0;
+}
+
+.header .cart-wrap .cart-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem .8rem;
+  position: relative;
+}
+
+.header .cart-wrap .cart-item img{
+  object-fit: cover;
+  height: 106px;
+  width: 137px;
+}
+
+.header .cart-wrap .cart-item .fa-trash{
+  color: var(--primary);
+  font-size: var(--fs-md);
+  padding:2rem .6rem;
+}
+
+.header .cart-wrap .cart-item .fa-trash:hover{
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+
+.header .cart-wrap .cart-item .content{
+  color: var(--green-111);
+  font-size: var(--fs-md);
+  
+}
+.header .cart-wrap .cart-item .content h3{
+  margin-bottom: .5rem;
+  width: 150px;
+}
+.header .cart-wrap .cart-item .content .price{
+  margin-bottom: .4rem;
+}
+.header .cart-wrap .cart-item .content .count{
+  display: flex;
+}
+
+.header .cart-wrap .cart-item .content .count span{
+  cursor: pointer;
+  color: var(--green-111);
+  border: 1px solid var(--green-111);
+  font-size: var(--fs-md);
+  padding: .2rem .7rem;
+}
+
+.header.scroll {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.header .container h1 {
+  margin-right: auto;
+}
+
+/* 圖片取代文字 */
+.header .container .logo {
+  height: 50px;
+  width: 235px;
+  background-size: cover;
+  background: url("../../../src/images/logo-all-dark.png") no-repeat;
+  background-position: cover;
+  display: block;
+  /* hideText */
+  text-indent: 110%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.header .container .fa-bars {
+  color: var(--primary);
+  font-size: 2.5rem;
+  cursor: pointer;
+  /* border: 0.1rem solid var(--primary);
+  border-radius: 0.3rem; */
+  padding: 0.5rem 1.5rem;
+  display: none;
+  margin-right: auto;
+}
+
+.header .container .fa-times {
+  transform: rotate(-180deg);
+}
+
+.header .container .navbar .menu {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 6rem;
+}
+
+.header .container .navbar .menu li {
+  margin-left: 1.5rem;
+}
+
+.header .container .navbar .menu a {
+  display: block;
+  color: #3f5d45;
+  font-size: var(--fs-lg);
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+}
+
+.header .container .navbar .menu li a:hover {
+  color: var(--green-111);
+}
+
+.header .container .cart {
+  color: #3f5d45;
+  font-size: var(--fs-lg);
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+}
+
+
+/* header End */
+
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem 2rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+    background-color: var(--white);
+  }
+
+  .header .container .mobile_cart {
+    display: block;
+    font-size: var(--fs-lg);
+  }
+
+  .header .container .navbar {
+    position: fixed;
+    top: -120%;
+    left: 0;
+    height: auto;
+    width: 100%;
+    background-color: var(--green-000);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: clip-path 0.3s;
+  }
+
+  /* show menu */
+  .header .container .navbar.active {
+    top: 6rem;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    transition: clip-path 0.3s;
+  }
+
+  /* show menu */
+  .header .container .navbar .menu {
+    height: 100%;
+    width: 100%;
+    flex-flow: column; /* 指定 已經是 flex 的 ul 元素， 裡面項目的排法 */
+  }
+
+  .header .container .navbar .menu .item {
+    width: 100%;
+    margin: 0.1rem 0;
+    text-align: center;
+  }
+
+  .header .container .navbar .menu .item a:hover {
+    color: var(--primary);
+    width: 100%;
+    background-color: var(--secondary);
+  }
+
+  .header .container .fa-bars {
+    display: initial;
+    /* transform: scale(2); */
+  }
+}
+
+@media (max-width: 425px) {
+  .header {
+    padding: 0.1rem 0;
+  }
+
+  .header .container .mobile_cart {
+    display: block;
+    font-size: var(--fs-md);
+  }
+  .header .container .fa-bars {
+    font-size: var(--fs-md);
+    height: 100%;
+  }
+  /* show menu */
+  .header .container .navbar.active {
+    top: 5rem;
+  }
+}

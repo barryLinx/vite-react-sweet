@@ -1,0 +1,589 @@
+.checkout-page {
+  margin-top: 150px;
+}
+
+.checkout-page .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0 1.5rem;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.checkout-page .container .form-container {
+  width: 62%;
+}
+
+.checkout-page .container .form-container .checkout-form {
+  background-color: var(--primary);
+}
+
+.checkout-page .container .form-container .checkout-form .form-body {
+  padding: 30px 40px;
+}
+
+.checkout-page .container .form-container .checkout-form .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.checkout-page .container .form-container .checkout-form .head h2 {
+  font-size: 36px;
+  color: var(--green-000);
+  width: 48%;
+}
+
+/* stepProgressBar */
+.checkout-page .container .form-container .checkout-form .stepProgressBar {
+  display: flex;
+  justify-content: space-between;
+  width: 48%;
+}
+
+.checkout-page
+  .container
+  .form-container
+  .checkout-form
+  .stepProgressBar
+  .step {
+  border: 1px solid var(--green-000);
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  position: relative;
+  background-color: var(--primary);
+}
+
+.checkout-page
+  .container
+  .form-container
+  .checkout-form
+  .stepProgressBar
+  .step::after {
+  content: "";
+  width: 90px;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  left: 100%;
+  top: 50%;
+}
+
+.checkout-page
+  .container
+  .form-container
+  .checkout-form
+  .stepProgressBar
+  .step.inProgress::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 49%;
+  transform: translate(-49%, -50%);
+  z-index: 10;
+}
+
+.checkout-page
+  .container
+  .form-container
+  .checkout-form
+  .stepProgressBar
+  .step.inProgress.completed::before {
+  width: 25px;
+  height: 25px;
+}
+
+.checkout-page
+  .container
+  .form-container
+  .checkout-form
+  .stepProgressBar
+  .step:nth-child(3)::after {
+  width: 0;
+  height: 0;
+}
+
+.checkout-page
+  .container
+  .form-container
+  .checkout-form
+  .stepProgressBar
+  .step
+  .bullet {
+  position: absolute;
+  left: 15%;
+  top: 15%;
+  display: none;
+}
+
+.checkout-page
+  .container
+  .form-container
+  .checkout-form
+  .stepProgressBar
+  .step
+  .bullet.completed {
+  display: initial;
+  color: var(--primary);
+  z-index: 1200;
+}
+
+/* stepProgressBar End*/
+
+.checkout-page .container .form-container .checkout-form .form-checkbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkout-page
+  .container
+  .form-container
+  .checkout-form
+  .form-checkbox
+  .form-control {
+  width: 50%;
+}
+
+.checkout-page
+  .container
+  .form-container
+  .checkout-form
+  .form-checkbox
+  .customCheckoutBox {
+  display: flex;
+}
+
+.checkout-page
+  .container
+  .form-container
+  .checkout-form
+  .form-checkbox
+  .customCheckoutBox
+  input {
+  width: 18px;
+  height: 18px;
+  margin-right: 0.5rem;
+}
+
+.checkout-page
+  .container
+  .form-container
+  .checkout-form
+  .form-checkbox
+  .customCheckoutBox
+  label {
+  font-size: var(--fs-md);
+  color: var(--green-000);
+}
+
+.checkout-page .container .form-container .checkout-form .form-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.3rem;
+}
+
+/* .checkout-page .container .checkout-form .doubleSelect-fromControl .form-group .form-control{
+  width:100%;
+} */
+
+.checkout-page .container .form-container .checkout-form .form-control select {
+  width: 100%;
+  height: 56px;
+  color: var(--green-111);
+  background-color: var(--green-000);
+  padding: 1rem;
+}
+.checkout-page
+  .container
+  .form-container
+  .checkout-form
+  .form-control
+  select.success {
+  border: 2px solid #2ecc71;
+}
+
+.checkout-page
+  .container
+  .form-container
+  .checkout-form
+  .form-control
+  select.error {
+  border: 2px solid #e74c3c;
+}
+
+.checkout-page .container .checkout-form .form-group .form-control {
+  width: 100%;
+}
+
+.checkout-page
+  .container
+  .checkout-form
+  .form-group
+  .form-control:nth-child(1) {
+  margin-right: 10px;
+}
+
+.checkout-page .container .checkout-form .form-control {
+  display: flex;
+  flex-direction: column;
+  color: var(--green-000);
+  font-weight: 700;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.checkout-page .container .checkout-form .form-control .checkSame {
+  width: 20px;
+  height: 20px;
+}
+
+.checkout-page .container .checkout-form .form-control label {
+  font-size: var(--fs-lg);
+}
+
+.checkout-page .container .checkout-form .form-control input {
+  height: 56px;
+  width: 100%;
+  font-size: var(--fs-md);
+  padding-left: 1rem;
+  background-color: var(--green-000);
+}
+
+.checkout-page .container .checkout-form .form-control input.success {
+  border: 2px solid #2ecc71;
+}
+
+.checkout-page .container .checkout-form .form-control input.error {
+  border: 2px solid #e74c3c;
+}
+.checkout-page .container .checkout-form .form-control small {
+  color: #e74c3c;
+  letter-spacing: 1px;
+  font-size: var(--fs-md);
+}
+
+.checkout-page .container .checkout-form .input-group {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.checkout-page .container .checkout-form .input-group label {
+  height: 56px;
+  width: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--green-000);
+  color: var(--primary);
+  font-size: var(--fs-md);
+  cursor: pointer;
+}
+
+.checkout-page .container .checkout-form .btn-group {
+  text-align: center;
+  width: 100%;
+}
+
+.checkout-page .container .checkout-form .btn-group button {
+  padding: 1rem;
+  color: var(--green-111);
+  background-color: var(--primary);
+  border: 1px solid var(--green-111);
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-600);
+  width: 50%;
+  cursor: pointer;
+}
+
+.checkout-page .container .checkout-form .btn-group button.active {
+  color: var(--primary);
+  background-color: var(--green-000);
+}
+
+.checkout-page .container .checkout-form .tabs {
+  display: none;
+}
+
+.checkout-page .container .checkout-form .tabs.active {
+  display: block;
+}
+
+/* checkout-detailed */
+.checkout-page .container .checkout-detailed {
+  width: 35%;
+}
+
+.checkout-page .container .checkout-detailed .detailed {
+  background-color: var(--white);
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+.checkout-page .container .checkout-detailed .detailed h2 {
+  color: var(--green-111);
+  background-color: var(--green-000);
+}
+
+.checkout-page .container .checkout-detailed .detailed h2::after {
+  width: 0%;
+}
+
+.checkout-page .container .checkout-detailed .detailed .detailed-body {
+  color: var(--green-111);
+  border: 1px solid var(--green-000);
+  border-top: 0;
+}
+
+.checkout-page .container .checkout-detailed .detailed .total {
+  color: var(--green-111);
+}
+
+/* checkout-detailed End */
+
+/*  buy list */
+.checkout-page .container .checkout-detailed .buy-list h2 {
+  color: var(--green-111);
+  background-color: var(--green-000);
+  text-align: center;
+  padding: 1rem 0.5rem 1rem;
+  font-size: var(--fs-xl);
+}
+
+.checkout-page .container .checkout-detailed .buy-list .buy-list-body {
+  border: 1px solid var(--green-000);
+  border-top: 0;
+  padding: 1rem 1.5rem;
+  overflow: scroll;
+  height: 340px;
+}
+
+.checkout-page
+  .container
+  .checkout-detailed
+  .buy-list
+  .buy-list-body
+  .buy-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.checkout-page
+  .container
+  .checkout-detailed
+  .buy-list
+  .buy-list-body
+  .buy-card
+  img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  margin-right: 1.2rem;
+}
+
+.checkout-page
+  .container
+  .checkout-detailed
+  .buy-list
+  .buy-list-body
+  .buy-card
+  .buy-card-body
+  .title {
+  color: var(--green-111);
+  font-size: var(--fs-base);
+}
+
+.checkout-page
+  .container
+  .checkout-detailed
+  .buy-list
+  .buy-list-body
+  .buy-card
+  .buy-card-body
+  .price {
+  font-size: var(--fs-md);
+  color: var(--green-111);
+  letter-spacing: 1px;
+}
+/* buy list End*/
+
+/*finshed */
+
+.checkout-page .container .finshed {
+  width: 100%;
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkout-page .container .finshed p {
+  color: var(--primary);
+  font-weight: var(--fw-600);
+  font-size: 68px;
+  margin-bottom: 40px;
+}
+.checkout-page .container .finshed .btn-send {
+  width: 40%;
+  display: inline-block;
+}
+
+/* stepProgressBar */
+.checkout-page .container .finshed .stepProgressBar {
+  display: flex;
+  justify-content: space-between;
+  width: 260px;
+  margin-bottom: 25px;
+}
+
+.checkout-page .container .finshed .stepProgressBar .step {
+  border: 1px solid var(--green-000);
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  position: relative;
+  background-color: var(--primary);
+}
+
+.checkout-page .container .finshed .stepProgressBar .step::after {
+  content: "";
+  width: 90px;
+  height: 1px;
+  /* background-color: #fff; */
+  background-color: var(--primary);
+  position: absolute;
+  left: 100%;
+  top: 50%;
+}
+
+.checkout-page .container .finshed .stepProgressBar .step.inProgress::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  /* background-color: #fff; */
+  background-color: var(--primary);
+  position: absolute;
+  left: 50%;
+  top: 49%;
+  transform: translate(-49%, -50%);
+  z-index: 10;
+}
+
+.checkout-page
+  .container
+  .finshed
+  .stepProgressBar
+  .step.inProgress.completed::before {
+  width: 25px;
+  height: 25px;
+}
+
+.checkout-page .container .finshed .stepProgressBar .step:nth-child(3)::after {
+  width: 0;
+  height: 0;
+}
+
+.checkout-page .container .finshed .stepProgressBar .step .bullet {
+  position: absolute;
+  left: 15%;
+  top: 15%;
+  display: none;
+}
+
+.checkout-page .container .finshed .stepProgressBar .step .bullet.completed {
+  display: initial;
+  /* color: var(--primary); */
+  color: var(--white);
+  z-index: 1200;
+}
+
+/* stepProgressBar End*/
+
+/*finshed End*/
+
+@media screen and (max-width: 768px) {
+  .checkout-page
+    .container
+    .form-container
+    .checkout-form
+    .stepProgressBar
+    .step::after {
+    width: 50px;
+    height: 1px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .checkout-page {
+    margin-top: 100px;
+  }
+  .checkout-page .container .checkout-detailed {
+    display: none;
+  }
+  .checkout-page .container {
+    padding: 0 0;
+    margin-bottom: 0;
+  }
+
+  .checkout-page .container .form-container {
+    width: 100%;
+  }
+
+  .checkout-page .container .form-container .checkout-form {
+    padding: 1.5rem 1.3rem;
+  }
+
+  .checkout-page
+    .container
+    .form-container
+    .checkout-form
+    .stepProgressBar
+    .step::after {
+    width: 54px;
+    height: 1px;
+  }
+
+  .checkout-page .container .finshed {
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .checkout-page .container .finshed {
+    position: relative;
+  }
+
+  .checkout-page .container .finshed p {
+    font-size: 52px;  
+  }
+
+  .checkout-page .container .finshed .stepProgressBar {
+    width: 205px;
+  }
+
+  .checkout-page .container .finshed .btn-send {
+    width: 100%;
+    position: absolute;
+    top: 100%;
+  }
+}
