@@ -1,6 +1,8 @@
 import React, { useState, useContext, useEffect } from "react";
 import "./header.css";
 //import CartAPI from "../../helper/cartAPI";
+import {Link } from 'react-router-dom';
+import { FaBars } from "react-icons/fa";
 import DataContext from "../../context/DataContext";
 
 const Header = () => {
@@ -61,23 +63,25 @@ const Header = () => {
   return (
     <header className="header">
       <div className="container">
-        <div
+        <FaBars id="menu-bar" onClick={menubar_handleToggle}/>
+        {/* <div
           id="menu-bar"
           className="fas fa-bars"
           onClick={menubar_handleToggle}
-        ></div>
+        ></div> */}
         <h1 className="">
-          <a href="/" className="logo">
-            logo
-          </a>
+          <Link to="/">logo</Link>
+          {/* <a href="/" className="logo">   </a> */}
         </h1>
         <nav className={`navbar ${NavbarActive ? "active" : ""}`}>
           <ul className="menu">
             <li className="item">
-              <a href="/">首頁</a>
+            <Link to="/">首頁</Link>
+              {/* <a href="/">首頁</a> */}
             </li>
             <li className="item">
-              <a href="/product">甜點</a>
+            <Link to="/product">甜點</Link>
+              {/* <a href="/product"></a> */}
             </li>
             {authed?.accessToken && (
               <li className="item">
@@ -86,7 +90,7 @@ const Header = () => {
             )}
             {
               !authed?.accessToken && ( <li className="item">
-              <a href="/signin">登入</a>
+              <Link to="/signin">甜點</Link>
             </li>)
             }
            
@@ -139,7 +143,7 @@ const Header = () => {
         {
           // cart.length || <p> 沒有商品</p>
         }
-
+<Link className="btn-send" to="/cart">結帳</Link>
         <a href="/cart" className="btn-send">
           結帳
         </a>

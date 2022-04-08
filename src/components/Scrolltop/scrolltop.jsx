@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import React, { useEffect } from "react";
+import { FaBars } from "react-icons/fa";
 import "./scrolltop.css";
 
 const Scrolltop = () => {
@@ -14,7 +15,10 @@ const Scrolltop = () => {
   });
   return (
     <>
-      <a href="#home" className="fas fa-angle-up" id="scroll-top"></a>
+    
+      <a href="#home" id="scroll-top">
+      <FaAngleUp/>
+      </a>
     </>
   );
 };
