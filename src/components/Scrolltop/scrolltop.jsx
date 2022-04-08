@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import React, { useEffect } from "react";
-import { FaBars } from "react-icons/fa";
+import { FaAngleUp } from "react-icons/fa";
 import "./scrolltop.css";
 
 const Scrolltop = () => {
